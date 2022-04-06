@@ -1,7 +1,76 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 .page-wrapper {
   display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.header {
+  position: relative;
+}
+.header-underneath-banner {
+  display: flex;
+}
+.logo-nav {
+  display: flex;
+  margin-right: auto;
+  margin-left: 0;
+}
+.logo {
+  padding: 50px 38px;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 50px 0px;
+}
+.nav-item {
+  padding: 0 15px 0 15px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  line-height: 26px;
+}
+.cart-user {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  align-items: center;
+}
+.cart {
+  display: flex;
+  padding: 50px 10px;
+  align-items: center;
+}
+.cart-logo {
+  padding: 0px 5px;
+}
+.cart-counter {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  background-color: #c4c4c4;
+  justify-content: center;
+  margin-right: 50px;
+}
+.user {
+  width: 74px;
+  height: 74px;
+  padding: 38px 0;
+  margin-right: 45px;
+}
+
+.main {
+}
+.footer {
 }
