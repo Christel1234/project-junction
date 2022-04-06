@@ -72,5 +72,12 @@ body {
 
 .main {
 }
+
 .footer {
+  flex-direction: column;
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
 }
