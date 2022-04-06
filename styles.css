@@ -80,8 +80,33 @@ body {
   margin-right: 45px;
 }
 
-.main {
+.banner {
+  background-image: url("./assets/images/banner.svg");
+  height: 384px;
+  margin-bottom: 32px;
+  position: relative;
 }
+
+.banner-box-container {
+  position: absolute;
+  left: 76px;
+  top: 82px;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  max-width: 486px;
+}
+.banner-box-text {
+  font-family: "Rockwell";
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 59px;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 70px;
+}
+
+/* .main {
+} */
 
 .footer {
   flex-direction: column;
