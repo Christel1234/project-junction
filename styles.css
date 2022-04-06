@@ -12,6 +12,16 @@ body {
 .header {
   position: relative;
 }
+.discount-banner {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .header-underneath-banner {
   display: flex;
 }
