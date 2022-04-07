@@ -109,40 +109,75 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main-heading {
-  display: flex;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 70px;
-  justify-content: center;
-
-  height: 70px;
-  left: 712px;
-  top: 687px;
-}
 .products {
+  display: flex;
+  padding-left: 72px;
 }
 .single-product {
+  display: flex;
+  flex-direction: column;
 }
 .product-image {
+  max-width: 500px;
+  width: 100%;
+  max-height: 500px;
+  position: relative;
 }
 .discount-overlay {
+  position: absolute;
+  top: 28px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 16px 12px 15px 26px;
 }
 .product-detail {
+  background: #f1e0e0;
+  height: 444px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .product-heading {
+  font-size: 45px;
+  font-weight: 700;
+  padding: 40px 0px 19px 26px;
 }
 .product-info {
+  font-size: 30px;
+  font-weight: 300;
+  padding-left: 26px;
 }
 .product-price {
+  margin-bottom: 28px;
+  margin-top: auto;
+  padding-left: 26px;
 }
 .old-price {
+  font-size: 50px;
+  font-weight: 400;
+  color: #890000;
+  text-decoration: line-through;
 }
 .new-price-and-cart {
+  display: flex;
+  flex-direction: row;
 }
 .new-price {
+  font-size: 50px;
+  font-weight: 700;
 }
 .cart-button {
+  padding-left: 86px;
+  color: #000000;
+}
+.cart-button button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .footer {
