@@ -116,6 +116,7 @@ body {
   justify-content: center;
   height: 70px;
   padding-bottom: 38px;
+  margin: 0;
 }
 .products {
   display: flex;
