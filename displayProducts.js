@@ -7,8 +7,8 @@ function displayProducts(products) {
   const displayContainer = document.getElementById("products-id");
   displayContainer.textContent = "";
 
-  products.forEach((element) => {
-    displayContainer.append(generateProductCard(element));
+  products.forEach((products) => {
+    displayContainer.append(generateProductCard(products));
   });
 }
 export { displayProducts };
