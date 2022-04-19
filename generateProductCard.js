@@ -103,6 +103,7 @@ function generateProductCard(product) {
 }
 
 function onAddToCart(product) {
+  addToCart(product);
   console.log(product.id);
 }
 
