@@ -1,4 +1,5 @@
 import { calculateDiscount } from "./utils.js";
+import { addToCart } from "./shoppingCart.js";
 
 /**
  * Generates product card for single product
