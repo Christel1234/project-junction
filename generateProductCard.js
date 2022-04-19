@@ -8,8 +8,14 @@ import { calculateDiscount } from "./utils.js";
 function generateProductCard(product) {
   console.log(product);
 
-  const productUL = document.createElement("ul");
-  productUL.classList.add("product-ul");
+  const {
+    id: prodId,
+    name: prodName,
+    description,
+    price,
+    image,
+    discounted_price: prodNewPrice,
+  } = product;
 
   const productLI = document.createElement("li");
   productLI.classList.add("product-li");
@@ -21,21 +27,25 @@ function generateProductCard(product) {
   productImageDiv.classList.add("product-image");
 
   const productImage = document.createElement("img");
+  productImage.src = image;
+  productImage.alt = prodName;
 
-  const discountOverlay = document.createElement("div");
-  discountOverlay.classList.add("discount-overlay");
-  // const discount =
-  //   calculateDiscount();
-  //   //
+  const productImageLink = document.createElement("a");
+  productImageLink.href = `product.html?id=${prodId}`;
 
   const productDetail = document.createElement("div");
   productDetail.classList.add("product-detail");
 
   const productHeading = document.createElement("div");
   productHeading.classList.add("product-heading");
+  productHeading.textContent = prodName;
+
+  const productHeadingLink = document.createElement("a");
+  productHeadingLink.href = `product.html?id=${prodId}`;
 
   const productInfo = document.createElement("div");
   productInfo.classList.add("product-info");
+  productInfo.textContent = description;
 
   const productPrice = document.createElement("div");
   productPrice.classList.add("product-price");
@@ -43,11 +53,23 @@ function generateProductCard(product) {
   const oldPrice = document.createElement("div");
   oldPrice.classList.add("old-price");
 
+  if (price - prodNewPrice > 0) {
+    oldPrice.textContent = `R ${price}`;
+    const discount = calculateDiscount(price, prodNewPrice);
+
+    const discountOverlay = document.createElement("div");
+    discountOverlay.className = "discount-overlay";
+    discountOverlay.textContent = discount;
+
+    productImageDiv.appendChild(discountOverlay);
+  }
+
   const newPriceAndCart = document.createElement("div");
   newPriceAndCart.classList.add("new-price-and-cart");
 
   const newPrice = document.createElement("div");
   newPrice.classList.add("new-price");
+  newPrice.textContent = `R ${prodNewPrice}`;
 
   const cartButtonDiv = document.createElement("div");
   cartButtonDiv.classList.add("cart-button");
@@ -58,14 +80,16 @@ function generateProductCard(product) {
   });
 
   const cartImage = document.createElement("img");
+  cartImage.src = "./assets/images/cart-button.svg";
+  cartImage.alt = "cart";
 
-  productUL.appendChild(productLI);
   productLI.appendChild(singleProduct);
-  singleProduct.appendChild(productImageDiv);
+  singleProduct.appendChild(productImageLink);
+  productImageLink.appendChild(productImageDiv);
   productImageDiv.appendChild(productImage);
-  productImageDiv.appendChild(discountOverlay);
   singleProduct.appendChild(productDetail);
-  productDetail.appendChild(productHeading);
+  productDetail.appendChild(productHeadingLink);
+  productHeadingLink.appendChild(productHeading);
   productDetail.appendChild(productInfo);
   productDetail.appendChild(productPrice);
   productPrice.appendChild(oldPrice);
@@ -73,8 +97,8 @@ function generateProductCard(product) {
   newPriceAndCart.appendChild(newPrice);
   newPriceAndCart.appendChild(cartButtonDiv);
   cartButtonDiv.appendChild(cartButton);
-
-  return productUL;
+  cartButton.appendChild(cartImage);
+  return productLI;
 }
 
 function onAddToCart(product) {
