@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.header {
+  position: relative;
+}
+.discount-banner {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-underneath-banner {
+  display: flex;
+}
+.logo-nav {
+  display: flex;
+  margin-right: auto;
+  margin-left: 0;
+}
+.logo {
+  padding: 50px 38px;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 50px 0px;
+}
+.nav-item {
+  padding: 0 15px 0 15px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  line-height: 26px;
+}
+.cart-user {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  align-items: center;
+}
+.cart {
+  display: flex;
+  padding: 50px 10px;
+  align-items: center;
+}
+.cart-logo {
+  padding: 0px 5px;
+}
+.cart-counter {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  background-color: #c4c4c4;
+  justify-content: center;
+  margin-right: 50px;
+}
+.user {
+  width: 74px;
+  height: 74px;
+  padding: 38px 0;
+  margin-right: 45px;
+}
+
+.banner {
+  background-image: url("./assets/images/banner.svg");
+  height: 384px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.banner-box-container {
+  position: absolute;
+  left: 76px;
+  top: 82px;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  max-width: 486px;
+}
+.banner-box-text {
+  font-family: "Rockwell";
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 59px;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 70px;
+}
+
+.footer {
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: auto;
+  position: relative;
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+}
