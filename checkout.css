@@ -186,10 +186,10 @@ button {
   margin-left: auto;
   text-align: right;
 }
-.subtotal-text {
+/* .subtotal-text {
 }
 .subtotal-amount {
-}
+} */
 .vat {
   font-size: 35px;
   font-weight: 400;
@@ -198,10 +198,10 @@ button {
   margin-left: auto;
   text-align: right;
 }
-.vat-text {
+/* .vat-text {
 }
 .vat-amount {
-}
+} */
 .total {
   font-size: 45px;
   font-weight: 700;
@@ -210,9 +210,29 @@ button {
   margin-left: auto;
   text-align: right;
 }
-.total-text {
+/* .total-text {
 }
 .total-amount {
+} */
+.pay {
+  padding-top: 55px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+.pay-button {
+  color: white;
+  background-color: #dbafae;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+  height: 106px;
+  width: 594px;
+  text-decoration: none;
 }
 .footer {
   flex-direction: column;
