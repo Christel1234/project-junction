@@ -105,6 +105,61 @@ body {
   padding: 50px 70px;
 }
 
+.main {
+  padding: 30px 80px;
+}
+.cart-box {
+  border: 1px solid;
+}
+.cart-ul {
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.cart-li {
+  display: flex;
+  flex-direction: column;
+}
+.cart-li a {
+  text-decoration: underline;
+}
+.cart-item {
+  display: flex;
+  padding: 40px 45px;
+}
+.image-and-heading {
+  display: flex;
+  margin-left: 0px;
+  margin-right: auto;
+}
+.product-image img {
+  max-width: 100px;
+}
+.product-heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+.product-price-and-remove-button {
+  flex-direction: row;
+  margin-right: 0px;
+  margin-left: auto;
+}
+.product-price {
+  font-size: 30px;
+  font-weight: 700;
+}
+.remove-button {
+  font-size: 30px;
+  font-weight: 400;
+}
+button {
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: underline;
+}
+
 .footer {
   flex-direction: column;
   margin-bottom: 0;

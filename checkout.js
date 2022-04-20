@@ -1,0 +1,2 @@
+function renderCart() {}
+function generateCart() {}
