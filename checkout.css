@@ -137,11 +137,13 @@ body {
 .cart-item {
   display: flex;
   padding-top: 40px;
+  border-bottom: solid 1px;
 }
 .image-and-heading {
   display: flex;
   margin-left: 0px;
   margin-right: auto;
+  padding-bottom: 17px;
 }
 .product-image img {
   max-width: 100px;
