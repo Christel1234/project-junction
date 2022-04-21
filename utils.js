@@ -19,5 +19,14 @@ function calculateDiscount(oldPrice, discountedPrice) {
     return `${discount}% OFF`;
   }
 }
+/**
+ * Calculates VAT of subtotal
+ * @param {*} subtotal - price before vat
+ * @returns - VAT to be added to subtotal
+ */
+function calculateVat(subtotal) {
+  const vat = Math.round(0.15 * subtotal);
+  return vat;
+}
 
-export { doFetch, calculateDiscount };
+export { doFetch, calculateDiscount, calculateVat };
