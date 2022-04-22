@@ -24,8 +24,6 @@ function generateSingleProduct(product) {
 
   productImageDiv.appendChild(productImage);
 
-  //////////////////////////////
-
   let productDetail = document.createElement("div");
   productDetail.classList.add("product-detail");
 
