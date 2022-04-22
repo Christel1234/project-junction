@@ -180,42 +180,26 @@ button {
   flex-direction: column;
   padding-top: 100px;
 }
-.subtotal {
-  font-size: 35px;
-  font-weight: 400;
-  display: flex;
-  margin-right: 0px;
-  margin-left: auto;
-  text-align: right;
-}
-/* .subtotal-text {
-}
-.subtotal-amount {
-} */
-.vat {
-  font-size: 35px;
-  font-weight: 400;
-  display: flex;
-  margin-right: 0px;
-  margin-left: auto;
-  text-align: right;
-}
-/* .vat-text {
-}
-.vat-amount {
-} */
+.subtotal,
+.vat,
 .total {
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+}
+.subtotal-text,
+.subtotal-amount,
+.vat-text,
+.vat-amount {
+  font-size: 35px;
+  font-weight: 400;
+}
+.total-text,
+.total-amount {
   font-size: 45px;
   font-weight: 700;
-  display: flex;
-  margin-right: 0px;
-  margin-left: auto;
-  text-align: right;
 }
-/* .total-text {
-}
-.total-amount {
-} */
+
 .pay {
   padding-top: 55px;
   display: flex;
