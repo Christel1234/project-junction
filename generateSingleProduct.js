@@ -4,7 +4,6 @@ import { addToCart } from "./shoppingCart.js";
 function generateSingleProduct(product) {
   console.log(product);
   const {
-    id: prodId,
     name: prodName,
     company,
     description,
@@ -38,8 +37,10 @@ function generateSingleProduct(product) {
   productBrandName.classList.add("product-brand-name");
   let by = document.createElement("div");
   by.classList.add("by");
+  by.textContent = "By";
   let brand = document.createElement("div");
   brand.classList.add("brand");
+  brand.textContent = company;
   productBrandName.appendChild(by);
   productBrandName.appendChild(brand);
 
