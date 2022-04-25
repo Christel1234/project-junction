@@ -91,6 +91,13 @@ function displayCart() {
     }else{
       checkoutHeading.textContent = `Your cart has ${numItemsInCart} items`;
     }
+    const clearCartButton = createElement("button");
+    clearCartButton.classList.add("clear-cart-button");
+    clearCartButton.textContent = "Clear cart";
+    clearCartButton.addEventListener("click", () => {
+      clearCart();
+    });
+    headingAndClearCart.appendChild(clearCartButton);
     
     const subVatTotal = document.createElement("div");
     subVatTotal.classList.add("subtotal-vat-total");
