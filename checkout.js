@@ -55,20 +55,21 @@ function displayCart() {
   cartBox.appendChild(headingAndClearCart);
   cartBox.appendChild(cartUl);
   checkoutPage.appendChild(cartBox);
+
+  const checkoutHeading = document.createElement("div");
+  checkoutHeading.classList.add("checkout-heading");
+  headingAndClearCart.appendChild(checkoutHeading);
   if (array.length === 0) {
-    const checkoutHeading = document.createElement("div");
-    checkoutHeading.classList.add("checkout-heading");
     checkoutHeading.textContent = "Your cart is empty";
     headingAndClearCart.classList.add("empty-cart");
-    headingAndClearCart.appendChild(checkoutHeading);
   } else {
-    const numOfItems = numOfItems();
-    if (numOfItems === 1) {
-      checkoutHeading.textContent = `Your cart has ${numItemsInCart} item`;
+    const num = numOfItems();
+    if (num === 1) {
+      checkoutHeading.textContent = `Your cart has ${num} item`;
     } else {
-      checkoutHeading.textContent = `Your cart has ${numItemsInCart} items`;
+      checkoutHeading.textContent = `Your cart has ${num} items`;
     }
-    const clearCartButton = createElement("button");
+    const clearCartButton = document.createElement("button");
     clearCartButton.classList.add("clear-cart-button");
     clearCartButton.textContent = "Clear cart";
     clearCartButton.addEventListener("click", () => {
@@ -130,8 +131,8 @@ function displayCart() {
     payDiv.appendChild(payButton);
     checkoutPage.appendChild(payDiv);
     array.forEach((product) => {
-      cartUl.appendChild(generateCartItem(product));
+      cartUl.append(generateCartItem(product));
     });
   }
 }
-displayCart;
+displayCart();
