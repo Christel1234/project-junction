@@ -8,6 +8,7 @@ function addToCart(product) {
     array.push(product);
     localStorage.setItem("items", JSON.stringify(array));
   }
+  console.log(array);
 }
 
 function removeFromCart(product) {
@@ -18,6 +19,7 @@ function removeFromCart(product) {
     }
   }
   localStorage.setItem("items", JSON.stringify(array));
+  console.log(array);
 }
 
 function getCartTotal() {
@@ -31,6 +33,7 @@ function getCartTotal() {
 
 function clearCart() {
   localStorage.clear();
+  console.log(array);
 }
 
 function numOfItems() {
