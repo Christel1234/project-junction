@@ -14,6 +14,11 @@
   font-weight: 700;
   padding-right: 40px;
 }
+.empty-cart {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
 .clear-cart-button {
   font-size: 30px;
   font-weight: 400;

@@ -20,7 +20,15 @@ function removeFromCart(product) {
   localStorage.setItem("items", JSON.stringify(array));
 }
 
-function getCartTotal() {}
+function getCartTotal() {
+  let array = JSON.parse(localStorage.getItem("items"));
+  const total = array.reduce(
+    (total, currentValue) => (total += currentValue.discounted_price),
+    0
+  );
+  return Math.round(total);
+}
+
 function clearCart() {
   localStorage.clear();
 }

@@ -55,78 +55,80 @@
     </header>
 
     <main class="main">
-      <div class="cart-box">
-        <div class="checkout-heading-and-clear-cart">
-          <div class="checkout-heading">
-            Your cart has 3 items
+      <div class="checkout-page">
+        <div class="cart-box" id="cart-box">
+          <div class="checkout-heading-and-clear-cart">
+          <!-- <div class="empty-cart"> -->
+            <div class="checkout-heading">
+              Your cart is empty 
+            </div>
+            <button class="clear-cart-button">
+              Clear cart
+            </button>
           </div>
-          <button class="clear-cart-button">
-            Clear cart
+          <ul class="cart-ul"> 
+            <li class="cart-li">
+              <div class="cart-item">
+                <div class="image-and-heading">
+                  <div class="product-image">
+                    <img src="./assets/images/product.svg" alt="macbook">
+                  </div>
+                  <div class="product-heading">
+                    Analog Quartz Clock
+                  </div>
+                </div>
+                <div class="product-price-and-remove-button">
+                  <div class="product-price">
+                    R50
+                  </div>
+                  <button class="remove-button">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="cart-li">
+              <div class="cart-item">
+                <div class="image-and-heading">
+                  <div class="product-image">
+                    <img src="./assets/images/product.svg" alt="">
+                  </div>
+                  <div class="product-heading">
+                    Analog Quartz Clock
+                  </div>
+                </div>
+                <div class="product-price-and-remove-button">
+                  <div class="product-price">
+                    R50
+                  </div>
+                  <button class="remove-button">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="subtotal-vat-total">
+            <div class="subtotal">
+              <div class="subtotal-text">Sub-total:</div>
+              <div class="subtotal-amount">R100</div>
+            </div>
+            <div class="vat">
+              <div class="vat-text">VAT:</div>
+              <div class="vat-amount">R15</div>
+            </div>
+            <div class="total">
+              <div class="total-text">Total:</div>
+              <div class="total-amount">R115</div>
+            </div>
+          </div>
+        </div>
+        <div class="pay">
+          <button class="pay-button">
+            PAY
           </button>
         </div>
-        <ul class="cart-ul"> 
-          <li class="cart-li">
-            <div class="cart-item">
-              <div class="image-and-heading">
-                <div class="product-image">
-                  <img src="./assets/images/product.svg" alt="macbook">
-                </div>
-                <div class="product-heading">
-                  Analog Quartz Clock
-                </div>
-              </div>
-              <div class="product-price-and-remove-button">
-                <div class="product-price">
-                  R50
-                </div>
-                <button class="remove-button">
-                  Remove
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="cart-li">
-            <div class="cart-item">
-              <div class="image-and-heading">
-                <div class="product-image">
-                  <img src="./assets/images/product.svg" alt="">
-                </div>
-                <div class="product-heading">
-                  Analog Quartz Clock
-                </div>
-              </div>
-              <div class="product-price-and-remove-button">
-                <div class="product-price">
-                  R50
-                </div>
-                <button class="remove-button">
-                  Remove
-                </button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="subtotal-vat-total">
-          <div class="subtotal">
-            <div class="subtotal-text">Sub-total:</div>
-            <div class="subtotal-amount">R100</div>
-          </div>
-          <div class="vat">
-            <div class="vat-text">VAT:</div>
-            <div class="vat-amount">R15</div>
-          </div>
-          <div class="total">
-            <div class="total-text">Total:</div>
-            <div class="total-amount">R115</div>
-          </div>
-        </div>
       </div>
-      <div class="pay">
-        <button class="pay-button">
-          PAY
-        </button>
-      </div>
-
     </main>
 
     <footer class="footer">
