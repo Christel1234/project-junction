@@ -5,6 +5,7 @@ import {
   getCartTotal,
   clearCart,
   numOfItems,
+  numOfItems,
 } from "./shoppingCart.js";
 
 function generateCartItem(product) {
@@ -82,6 +83,13 @@ function displayCart() {
     headingAndClearCart.classList.add("empty-cart");
     headingAndClearCart.appendChild(checkoutHeading);
   } else {
+    const numOfItems = numOfItems(); 
+    if (numOfItems===1){
+      checkoutHeading.textContent = `Your cart has ${numItemsInCart} item`;
+    }else{
+      checkoutHeading.textContent = `Your cart has ${numItemsInCart} items`;
+    }
+    
     const subVatTotal = document.createElement("div");
     subVatTotal.classList.add("subtotal-vat-total");
 
@@ -136,6 +144,9 @@ function displayCart() {
 
     payDiv.appendChild(payButton);
     checkoutPage.appendChild(payDiv);
+
+    
+
   }
 
 }
