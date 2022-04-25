@@ -27,7 +27,7 @@ function getCartTotal() {
     (total, currentValue) => (total += currentValue.discounted_price),
     0
   );
-  return Math.round(total);
+  return total.toFixed(2);
 }
 
 function clearCart() {

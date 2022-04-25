@@ -121,7 +121,11 @@ function displayCart() {
     totalText.textContent = "Total:";
     const totalAmount = document.createElement("div");
     totalAmount.classList.add("total-amount");
-    const getTotal = `R ${Math.round(getSubtotal + getVAT)}`;
+    const getTotal = `R ${(
+      parseFloat(getSubtotal) + parseFloat(getVAT)
+    ).toFixed(2)}`;
+    totalAmount.textContent = getTotal;
+
     subVatTotal.appendChild(total);
     total.appendChild(totalText);
     total.appendChild(totalAmount);

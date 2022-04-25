@@ -25,7 +25,7 @@ function calculateDiscount(oldPrice, discountedPrice) {
  * @returns - VAT to be added to subtotal
  */
 function calculateVat(subtotal) {
-  const vat = Math.round(0.15 * subtotal);
+  const vat = (0.15 * subtotal).toFixed(2);
   return vat;
 }
 
