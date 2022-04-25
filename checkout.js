@@ -6,6 +6,8 @@ import {
   numOfItems,
 } from "./shoppingCart.js";
 
+//document.getElementById("cart-counter").textContent = numOfItems();
+
 function generateCartItem(product) {
   const { image, name: prodName, discounted_price: prodNewPrice } = product;
   const cartLi = document.createElement("li");

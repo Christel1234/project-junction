@@ -71,6 +71,7 @@ function generateSingleProduct(product) {
   addToCartButton.classList.add("add-to-cart-button");
   addToCartButton.onclick = function () {
     onAddToCart(product);
+    window.location.reload();
   };
   addToCartButton.textContent = "ADD TO CART";
   addToCartDiv.appendChild(addToCartButton);

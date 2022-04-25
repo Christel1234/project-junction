@@ -1,5 +1,5 @@
 import { calculateDiscount } from "./utils.js";
-import { addToCart } from "./shoppingCart.js";
+import { addToCart, numOfItems } from "./shoppingCart.js";
 
 /**
  * Generates product card for single product
@@ -78,6 +78,7 @@ function generateProductCard(product) {
   const cartButton = document.createElement("button");
   cartButton.addEventListener("click", () => {
     onAddToCart(product);
+    window.location.reload();
   });
 
   const cartImage = document.createElement("img");
@@ -104,7 +105,6 @@ function generateProductCard(product) {
 
 function onAddToCart(product) {
   addToCart(product);
-  console.log(product.id);
 }
 
 export { generateProductCard };

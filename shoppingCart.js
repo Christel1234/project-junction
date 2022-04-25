@@ -35,7 +35,7 @@ function clearCart() {
 }
 
 function numOfItems() {
-  let array = JSON.parse(localStorage.getItem("items"));
+  let array = JSON.parse(localStorage.getItem("items") || "[]");
   return array.length;
 }
 
