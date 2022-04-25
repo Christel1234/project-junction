@@ -1,5 +1,5 @@
 import { calculateDiscount } from "./utils.js";
-import { addToCart } from "./shoppingCart.js";
+import { addToCart, numOfItems } from "./shoppingCart.js";
 
 function generateSingleProduct(product) {
   console.log(product);
@@ -71,7 +71,6 @@ function generateSingleProduct(product) {
   addToCartButton.classList.add("add-to-cart-button");
   addToCartButton.onclick = function () {
     onAddToCart(product);
-    window.location.reload();
   };
   addToCartButton.textContent = "ADD TO CART";
   addToCartDiv.appendChild(addToCartButton);
@@ -90,6 +89,7 @@ function generateSingleProduct(product) {
 
 function onAddToCart(product) {
   addToCart(product);
+  //document.getElementById("cart-counter").textContent = numOfItems();
 }
 
 export { generateSingleProduct };

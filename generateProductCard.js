@@ -78,7 +78,6 @@ function generateProductCard(product) {
   const cartButton = document.createElement("button");
   cartButton.addEventListener("click", () => {
     onAddToCart(product);
-    window.location.reload();
   });
 
   const cartImage = document.createElement("img");
@@ -105,6 +104,7 @@ function generateProductCard(product) {
 
 function onAddToCart(product) {
   addToCart(product);
+  document.getElementById("cart-counter").textContent = numOfItems();
 }
 
 export { generateProductCard };

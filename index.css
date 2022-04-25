@@ -20,6 +20,9 @@
 .product-ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-items: center;
   justify-content: space-between;
   max-width: 1728px;
   width: 100%;
