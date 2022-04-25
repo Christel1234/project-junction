@@ -32,6 +32,7 @@ function generateCartItem(product) {
   removeButton.textContent = "Remove";
   removeButton.addEventListener("click", () => {
     removeFromCart(product);
+    window.location.reload();
   });
   cartLi.appendChild(cartItem);
   cartItem.appendChild(imageAndHeading);
@@ -44,7 +45,7 @@ function generateCartItem(product) {
   return cartLi;
 }
 function displayCart() {
-  let array = JSON.parse(localStorage.getItem("items"));
+  let array = JSON.parse(localStorage.getItem("items") || "[]");
   const checkoutPage = document.getElementById("checkout-page");
   const cartBox = document.createElement("div");
   cartBox.classList.add("cart-box");
@@ -74,6 +75,9 @@ function displayCart() {
     clearCartButton.textContent = "Clear cart";
     clearCartButton.addEventListener("click", () => {
       clearCart();
+      checkoutHeading.textContent = "Your cart is empty";
+      headingAndClearCart.classList.add("empty-cart");
+      window.location.reload();
     });
     headingAndClearCart.appendChild(clearCartButton);
 

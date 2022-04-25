@@ -8,18 +8,17 @@ function addToCart(product) {
     array.push(product);
     localStorage.setItem("items", JSON.stringify(array));
   }
-  console.log(array);
 }
 
 function removeFromCart(product) {
   let array = JSON.parse(localStorage.getItem("items"));
   for (let i = 0; i < array.length; i++) {
     if (product.id === array[i].id) {
-      item.splice(i, 1);
+      array.splice(i, 1);
+      break;
     }
   }
   localStorage.setItem("items", JSON.stringify(array));
-  console.log(array);
 }
 
 function getCartTotal() {
@@ -33,7 +32,6 @@ function getCartTotal() {
 
 function clearCart() {
   localStorage.clear();
-  console.log(array);
 }
 
 function numOfItems() {

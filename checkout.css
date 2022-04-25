@@ -12,16 +12,18 @@
 .checkout-heading {
   font-size: 45px;
   font-weight: 700;
-  padding-right: 40px;
 }
 .empty-cart {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+  justify-content: center;
+  padding-bottom: 0px;
 }
 .clear-cart-button {
   font-size: 30px;
   font-weight: 400;
+  padding-left: 40px;
 }
 .cart-ul {
   flex-direction: row;
