@@ -1,20 +1,44 @@
 function addToCart(product) {
-  try {
-    let item = JSON.parse(localStorage.getItem(`${product.id}`));
-    item.push(product);
-    localStorage.setItem(`${product.id}`, JSON.stringify(product));
-  } catch (error) {
-    let newArray = new Array();
-    let item = JSON.parse(localStorage.getItem(`${product.id}`));
-    localStorage.setItem(`${product.id}`, JSON.stringify(product));
-    newArray.push(item);
+  let array = [];
+  if (localStorage.length === 0) {
+    array.push(product);
+    localStorage.setItem("items", JSON.stringify(array));
+  } else {
+    array = JSON.parse(localStorage.getItem("items"));
+    array.push(product);
+    localStorage.setItem("items", JSON.stringify(array));
   }
+  console.log(array);
 }
 
-function removeFromCart() {}
-function getCartTotal() {}
+function removeFromCart(product) {
+  let array = JSON.parse(localStorage.getItem("items"));
+  for (let i = 0; i < array.length; i++) {
+    if (product.id === array[i].id) {
+      item.splice(i, 1);
+    }
+  }
+  localStorage.setItem("items", JSON.stringify(array));
+  console.log(array);
+}
+
+function getCartTotal() {
+  let array = JSON.parse(localStorage.getItem("items"));
+  const total = array.reduce(
+    (total, currentValue) => (total += currentValue.discounted_price),
+    0
+  );
+  return Math.round(total);
+}
+
 function clearCart() {
   localStorage.clear();
+  console.log(array);
 }
 
-export { addToCart, removeFromCart, getCartTotal, clearCart };
+function numOfItems() {
+  let array = JSON.parse(localStorage.getItem("items"));
+  return array.length;
+}
+
+export { addToCart, removeFromCart, getCartTotal, clearCart, numOfItems };
